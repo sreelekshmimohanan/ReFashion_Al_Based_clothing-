@@ -1,0 +1,95 @@
+{% load static %}
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Hexashop Ecommerce HTML CSS Template</title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-hexashop.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+<!--
+
+TemplateMo 571 Hexashop
+
+https://templatemo.com/tm-571-hexashop
+
+-->
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="{% static 'assets/images/logo.png' %}">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                        {% if request.session.admin %}
+                            <li class="scroll-to-section"><a href="http://127.0.0.1:8000/index" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="http://127.0.0.1:8000/v_users">Men's</a></li>
+                            <li class="scroll-to-section"><a href="http://127.0.0.1:8000/">Men's</a></li>
+                            <li class="scroll-to-section"><a href="http://127.0.0.1:8000/logout">Logout</a></li>
+                            {% elif request.session.uid %}
+                            <li class="scroll-to-section"><a href="http://127.0.0.1:8000/index" class="active">Home</a></li>
+
+
+                            <li class="scroll-to-section"><a href="#women">Women's</a></li>
+                            <li class="scroll-to-section"><a href="#kids">Kid's</a></li>
+                            <li class="scroll-to-section"><a href="http://127.0.0.1:8000/logout">Logout</a></li>
+
+                            {% else %}
+                         
+                            
+                            <li class="scroll-to-section"><a href="http://127.0.0.1:8000/index">Home</a></li>
+                            <li class="scroll-to-section"><a href="http://127.0.0.1:8000/register">Register</a></li>
+                            <li class="scroll-to-section"><a href="http://127.0.0.1:8000/login">Login</a></li>
+                            {% endif %}
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+{% endblock %}
